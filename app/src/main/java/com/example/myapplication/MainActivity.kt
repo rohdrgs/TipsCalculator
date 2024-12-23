@@ -2,30 +2,34 @@ package com.example.myapplication
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.myapplication.databinding.ActivityMainBinding
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+
+    private lateinit var binding: ActivityMainBinding
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets }
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
+            binding.btnClean.setOnClickListener {
+                println ( "Rodrigo" + binding.valorConta.text )
+                println ("Assunção" + binding.tilNumPeople.text)
+            }
 
 
 
-            val btnClean: Button = findViewById (R.id.btn_clean)
-            val btnCalcular: Button = findViewById(R.id.btn_done)
-            val edtValorTotal: TextInputEditText = findViewById(R.id.valor_conta)
-            val edtNumpeople: TextInputEditText = findViewById(R.id.til_num_people)
+
 
 
 
