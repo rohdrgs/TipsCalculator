@@ -90,12 +90,12 @@
             android:layout_height="wrap_content"
             android:text="10%" />
         <RadioButton
-            android:id="@+id/rg_option_two"
+            android:id="@+id/rb_option_two"
             android:text="15%"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <RadioButton
-            android:id="@+id/rg_option_three"
+            android:id="@+id/rb_option_three"
             android:text="20%"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>

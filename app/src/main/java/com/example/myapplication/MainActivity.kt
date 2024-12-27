@@ -22,6 +22,24 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+            binding.rbOptionOne.setOnCheckedChangeListener { _, isChecked ->
+
+                println("Rodrigo Opiton one:$isChecked")
+            }
+
+            binding.rbOptionTwo.setOnCheckedChangeListener { _, isCheked ->
+
+                println("Rodrigo Opition two:$isCheked")
+            }
+
+            binding.rbOptionThree.setOnCheckedChangeListener { _, isCheked ->
+
+                println("Rodrigo Opition Three$isCheked")
+            }
+
+
+
+
             binding.btnClean.setOnClickListener {
                 println ( "Rodrigo" + binding.valorConta.text )
                 println ("Assunção" + binding.tilNumPeople.text)
